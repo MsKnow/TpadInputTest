@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    
+    
+    <!-- <View android:id="@+id/view_test"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/> -->
+    
+    
+
+    
+    <nxr.tpad.lib.views.FrictionMapView
+        android:id="@+id/fricView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+    <TextView android:id="@+id/tv_input"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:text="1234"
+        android:clickable="true"
+        android:onClick="changeLength"
+
+        android:textColor="@color/red"/>
+
+    <TextView android:id="@+id/tv_request"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:gravity="center_horizontal"
+        android:text="1234"
+        />
+
+    <TextView android:id="@+id/tv_inputs"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:gravity="right"
+
+        />
+    
+    <LinearLayout 
+        android:id="@+id/setting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+        
+        <LinearLayout 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="horizontal">
+            <TextView android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="条数"/>
+            <EditText
+                android:id="@+id/count" 
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="3"/>
+            <EditText 
+                android:id="@+id/count_from"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="3"/>
+            <EditText 
+                android:id="@+id/count_to"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="5"/>
+        </LinearLayout>
+        
+        <LinearLayout 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="horizontal">
+            <TextView android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="间距"/>
+            <EditText
+                android:id="@+id/interval" 
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="80"/>
+            <EditText 
+                
+                android:id="@+id/interval_from"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="80"/>
+            <EditText 
+                
+                android:id="@+id/interval_to"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="100"/>
+        </LinearLayout>
+        
+        <LinearLayout 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="horizontal">
+            <TextView android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="宽度"/>
+            <EditText
+                android:id="@+id/width" 
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="80"/>
+            <EditText
+                android:enabled="false" 
+                android:id="@+id/width_from"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="50"/>
+            <EditText 
+                android:enabled="false"
+                android:id="@+id/width_to"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="50"/>
+        </LinearLayout>
+        
+        <Button
+            android:id="@+id/bt_ok" 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="完成"
+            android:onClick="hideSetting"/>
+        
+    </LinearLayout>
+
+</FrameLayout>
